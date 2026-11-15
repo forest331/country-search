@@ -39,7 +39,7 @@ describe('debounce', () => {
 
     debounced();
     vi.advanceTimersByTime(200);
-    debounced(); // сброс таймера
+    debounced();
     vi.advanceTimersByTime(200);
 
     expect(fn).not.toHaveBeenCalled();
