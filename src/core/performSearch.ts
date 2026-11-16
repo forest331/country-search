@@ -1,7 +1,12 @@
+import { searchCountries } from './searchCountries';
+
+const DEFAULT_TIMEOUT_MS = 5000;
+
 export function performSearch(
-  _query: string,
-  _signal: AbortSignal,
-  _timeoutMs?: number,
+  query: string,
+  signal: AbortSignal,
+  timeoutMs: number = DEFAULT_TIMEOUT_MS,
 ): Promise<unknown[]> {
-  throw new Error('not implemented');
+  const combinedSignal = AbortSignal.any([signal, AbortSignal.timeout(timeoutMs)]);
+  return searchCountries(query, combinedSignal);
 }
