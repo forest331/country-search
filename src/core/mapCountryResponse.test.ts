@@ -1,4 +1,3 @@
-import { describe, it, expect } from 'vitest';
 import { mapCountryResponse } from './mapCountryResponse';
 
 const rawSpain = {
