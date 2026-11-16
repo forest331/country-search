@@ -82,7 +82,7 @@ function closeDetail() {
 }
 function showDetail(card) {
     const cardEl = el('div', 'detail-card');
-    const closeBtn = el('button', 'close-btn', '×');
+    const closeBtn = el('button', 'close-btn');
     closeBtn.setAttribute('aria-label', 'Закрыть');
     closeBtn.addEventListener('click', closeDetail);
     cardEl.append(closeBtn, el('div', 'detail-flag', card.flag), el('h2', 'detail-name', card.name), createDetailRow('Столица', card.capital || '—'), createDetailRow('Регион', card.region || '—'), createDetailRow('Население', card.population.toLocaleString()), createDetailRow('Языки', card.languages || '—'));

@@ -377,13 +377,10 @@ body {
   right: 1rem;
   width: 36px;
   height: 36px;
+  padding: 0; /* важно обнулить стандартные отступы кнопки */
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: inherit;
-  font-size: 1.5rem;
-  line-height: 1;
-  color: var(--text-muted);
   background: var(--bg-hover);
   border: none;
   border-radius: 50%;
@@ -394,10 +391,34 @@ body {
     transform var(--transition);
 }
 
+/* Рисуем две идеальные полоски крестика */
+.close-btn::before,
+.close-btn::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 2px;
+  background-color: var(--text-muted);
+  border-radius: 1px;
+  transition: background-color var(--transition);
+}
+
+.close-btn::before {
+  transform: rotate(45deg);
+}
+
+.close-btn::after {
+  transform: rotate(-45deg);
+}
+
 .close-btn:hover {
   background: var(--border);
-  color: var(--text);
   transform: rotate(90deg);
+}
+
+.close-btn:hover::before,
+.close-btn:hover::after {
+  background-color: var(--text);
 }
 .close-btn:focus-visible {
   outline: 3px solid var(--accent-soft);
