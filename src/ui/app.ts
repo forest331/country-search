@@ -111,7 +111,7 @@ function closeDetail(): void {
 function showDetail(card: CountryCard): void {
   const cardEl = el('div', 'detail-card');
 
-  const closeBtn = el('button', 'close-btn', '×');
+  const closeBtn = el('button', 'close-btn');
   closeBtn.setAttribute('aria-label', 'Закрыть');
   closeBtn.addEventListener('click', closeDetail);
 
