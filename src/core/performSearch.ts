@@ -1,4 +1,4 @@
-import { searchCountries } from './searchCountries';
+import { searchCountries } from './searchCountries.js';
 
 const DEFAULT_TIMEOUT_MS = 5000;
 

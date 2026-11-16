@@ -1,5 +1,5 @@
-import { performSearch } from './performSearch';
-import { HttpError } from './searchCountries';
+import { performSearch } from './performSearch.js';
+import { HttpError } from './searchCountries.js';
 
 function mockResponse(body: unknown, status = 200): Response {
   return {

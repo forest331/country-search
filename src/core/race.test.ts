@@ -1,4 +1,4 @@
-import { performSearch } from './performSearch';
+import { performSearch } from './performSearch.js';
 
 interface PendingRequest {
   query: string;

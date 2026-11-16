@@ -1,4 +1,4 @@
-import { searchCountries, HttpError } from './searchCountries';
+import { searchCountries, HttpError } from './searchCountries.js';
 
 function mockResponse(body: unknown, status = 200): Response {
   return {

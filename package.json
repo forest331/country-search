@@ -9,6 +9,7 @@
     "format": "prettier --write .",
     "test": "vitest run",
     "test:watch": "vitest",
+    "serve": "npx serve .",
     "prepare": "husky"
   },
   "repository": {

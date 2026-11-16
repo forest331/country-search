@@ -1,4 +1,4 @@
-import { mapCountryResponse } from './mapCountryResponse';
+import { mapCountryResponse } from './mapCountryResponse.js';
 
 const rawSpain = {
   name: 'Spain',
