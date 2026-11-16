@@ -1,4 +1,3 @@
-import { describe, it, expect, vi, afterEach } from 'vitest';
 import { searchCountries, HttpError } from './searchCountries';
 
 function mockResponse(body: unknown, status = 200): Response {
